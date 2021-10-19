@@ -43,7 +43,7 @@ setDate('');
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="text" min="0.01" step="0.01"  value={enteredAmount} onChange={amountChangeHandler}/>
+          <input type="number" min="0.01" step="0.01"  value={enteredAmount} onChange={amountChangeHandler}/>
         </div>
 
         <div className="new-expense__control">
@@ -52,6 +52,8 @@ setDate('');
         </div>
       </div>
       <div className="new-expense__actions">
+      <button type="button" onClick={props.onCancel}>Cancel</button>
+
         <button type="submit">Add Expense</button>
       </div>
     </form>
